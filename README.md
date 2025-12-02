@@ -1,6 +1,5 @@
-# ER-diyagram-
+```mermaid
 erDiagram
-
     KULLANICI {
         int kullanici_id PK
         string ad
@@ -59,17 +58,10 @@ erDiagram
         string aciklama
     }
 
-    %% İLİŞKİLER (Chen diyagramındaki gibi adlarıyla)
-    
     KULLANICI ||--o{ ABONELIK : "OLUSTURUR"
-
     ABONELIK_PAKETI ||--o{ ABONELIK : "ICERIR"
-
     YONETICI ||--o{ ABONELIK : "ONAYLAR"
-
     ABONELIK ||--o{ ODEME : "URETIR"
-
     ODEME ||--o| GECIKMIS_BORC : "GECIKME_DONUSTURUR"
-
-    %% Yonetici bir kullanıcının özel hali (opsiyonel)
     KULLANICI ||--o| YONETICI : "OZELLESTIRILMIS_KULLANICI"
+```
